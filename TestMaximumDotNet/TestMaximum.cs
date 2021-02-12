@@ -4,34 +4,15 @@ namespace TestMaximumNameSpace
 {
     public class TestMaximum
     {
-        public int GetMaximumInteger(int FirstNumber, int SecondNumber, int ThirdNumber)
+        public E GetMaximumValue<E>(E FirstNumber, E SecondNumber, E ThirdNumber) where E : IComparable
         {
-            if (FirstNumber > SecondNumber && FirstNumber > ThirdNumber)
+            if (FirstNumber.CompareTo(SecondNumber) > 0 && FirstNumber.CompareTo(ThirdNumber) > 0)
                 return FirstNumber;
-            else if (SecondNumber > ThirdNumber)
+            else if (SecondNumber.CompareTo(ThirdNumber) > 0)
                 return SecondNumber;
             else
                 return ThirdNumber;           
         }
-        public float GetMaximumFlaot(float FirstNumber, float SecondNumber, float ThirdNumber)
-        {
-            if (FirstNumber > SecondNumber && FirstNumber > ThirdNumber)
-                return FirstNumber;
-            else if (SecondNumber > ThirdNumber)
-                return SecondNumber;
-            else
-                return ThirdNumber;
-        }
-        public string GetMaximumString(string FirstString, string SecondString, string ThirdString)
-        {
-            if (FirstString.CompareTo(SecondString) > 0 && FirstString.CompareTo(ThirdString) > 0)
-                return FirstString;
-            else if (SecondString.CompareTo(ThirdString) > 0)
-                return SecondString;
-            else
-                return ThirdString;
-        }
-
             static void Main(string[] args)
         {
 
