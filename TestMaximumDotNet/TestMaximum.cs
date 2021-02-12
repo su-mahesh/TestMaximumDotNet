@@ -13,11 +13,19 @@ namespace TestMaximumNameSpace
             else
                 return ThirdNumber;           
         }
-
+        public float GetMaximumFlaot(float FirstNumber, float SecondNumber, float ThirdNumber)
+        {
+            if (FirstNumber > SecondNumber && FirstNumber > ThirdNumber)
+                return FirstNumber;
+            else if (SecondNumber > ThirdNumber)
+                return SecondNumber;
+            else
+                return ThirdNumber;
+        }
 
         static void Main(string[] args)
         {
 
-        }
+        }      
     }
 }
