@@ -1,29 +1,28 @@
 ﻿using System;
+using System.Linq;
 
 namespace TestMaximumNameSpace
 {
     public class TestMaximum<E> where E : IComparable
     {
-        E FirstValue;
-        E SecondValue;
-        E ThirdValue;
+        E[] InputArray;
 
 
-        public TestMaximum(E FirstValue, E SecondValue, E ThirdValue)
+        public TestMaximum(E[] InputArray)
         {
-            this.FirstValue = FirstValue;
-            this.SecondValue = SecondValue;
-            this.ThirdValue = ThirdValue;
+            this.InputArray = InputArray;
+        }
+
+        public E[] SortArray(E[] InputArray)
+        {
+            Array.Sort(InputArray);
+            return InputArray;
         }
 
         public E GetMaximumValue()
         {
-            if (FirstValue.CompareTo(SecondValue) > 0 && FirstValue.CompareTo(ThirdValue) > 0)
-                return FirstValue;
-            else if (SecondValue.CompareTo(ThirdValue) > 0)
-                return SecondValue;
-            else
-                return ThirdValue;           
+            E[] SortedInputArray = SortArray(InputArray);
+            return SortedInputArray.Last();
         }
     }
 }
