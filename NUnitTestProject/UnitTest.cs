@@ -19,5 +19,11 @@ namespace NUnitTestProject
             int result = testMaximum.GetMaximumInteger(76, 50, 34);
             Assert.AreEqual(76, result);
         }
+        [Test]
+        public void GivenMaxInteger_AtSecondPosition_ShouldReturnTheSameNumber()
+        {
+            int result = testMaximum.GetMaximumInteger(50, 76, 34);
+            Assert.AreEqual(76, result);
+        }
     }
 }
