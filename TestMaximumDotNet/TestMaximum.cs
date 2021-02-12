@@ -4,7 +4,19 @@ namespace TestMaximumNameSpace
 {
     public class TestMaximum<E> where E : IComparable
     {
-        public E GetMaximumValue(E FirstValue, E SecondValue, E ThirdValue)
+        E FirstValue;
+        E SecondValue;
+        E ThirdValue;
+
+
+        public TestMaximum(E FirstValue, E SecondValue, E ThirdValue)
+        {
+            this.FirstValue = FirstValue;
+            this.SecondValue = SecondValue;
+            this.ThirdValue = ThirdValue;
+        }
+
+        public E GetMaximumValue()
         {
             if (FirstValue.CompareTo(SecondValue) > 0 && FirstValue.CompareTo(ThirdValue) > 0)
                 return FirstValue;
