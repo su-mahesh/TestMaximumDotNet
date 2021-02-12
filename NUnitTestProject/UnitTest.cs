@@ -41,5 +41,12 @@ namespace NUnitTestProject
             float result = testMaximum.GetMaximumFlaot(76.1f, 50.2f, 34.3f);
             Assert.AreEqual(76.1f, result);
         }
+
+        [Test]
+        public void GivenMaxFlaot_AtSecondPosition_ShouldReturnTheSameNumber()
+        {
+            float result = testMaximum.GetMaximumFlaot(50.2f, 76.1f, 34.3f);
+            Assert.AreEqual(76.1f, result);
+        }
     }
 }
