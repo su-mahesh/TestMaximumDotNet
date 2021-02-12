@@ -2,20 +2,16 @@
 
 namespace TestMaximumNameSpace
 {
-    public class TestMaximum
+    public class TestMaximum<E> where E : IComparable
     {
-        public E GetMaximumValue<E>(E FirstNumber, E SecondNumber, E ThirdNumber) where E : IComparable
+        public E GetMaximumValue(E FirstValue, E SecondValue, E ThirdValue)
         {
-            if (FirstNumber.CompareTo(SecondNumber) > 0 && FirstNumber.CompareTo(ThirdNumber) > 0)
-                return FirstNumber;
-            else if (SecondNumber.CompareTo(ThirdNumber) > 0)
-                return SecondNumber;
+            if (FirstValue.CompareTo(SecondValue) > 0 && FirstValue.CompareTo(ThirdValue) > 0)
+                return FirstValue;
+            else if (SecondValue.CompareTo(ThirdValue) > 0)
+                return SecondValue;
             else
-                return ThirdNumber;           
-        }
-            static void Main(string[] args)
-        {
-
+                return ThirdValue;           
         }
     }
 }
