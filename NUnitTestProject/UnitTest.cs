@@ -70,5 +70,12 @@ namespace NUnitTestProject
             string result = testMaximum.GetMaximumString("zebra", "Zebra", "lion");
             Assert.AreEqual("Zebra", result);
         }
+
+        [Test]
+        public void GivenMaxString_AtThirdPosition_ShouldReturnTheSameString()
+        {
+            string result = testMaximum.GetMaximumString("Zebra", "lion", "zebra");
+            Assert.AreEqual("Zebra", result);
+        }
     }
 }
