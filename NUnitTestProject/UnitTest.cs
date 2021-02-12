@@ -55,5 +55,13 @@ namespace NUnitTestProject
             float result = testMaximum.GetMaximumFlaot(50.2f, 34.3f, 76.1f);
             Assert.AreEqual(76.1f, result);
         }
+
+        //FIND MAXIMUM STRING
+        [Test]
+        public void GivenMaxString_AtFirstPosition_ShouldReturnTheSameString()
+        {
+            string result = testMaximum.GetMaximumString("Zebra", "lion", "zebra");
+            Assert.AreEqual("Zebra", result);
+        }
     }
 }
